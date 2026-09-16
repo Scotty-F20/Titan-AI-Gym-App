@@ -68,6 +68,10 @@ function ExerciseCard({ planned, index }: { planned: GeneratedWorkout['exercises
   }
 
   function handleSetCustomDemo() {
+      if (!exercise || !exercise.id) {
+        window.alert('No exercise selected for custom demo')
+        return
+      }
     const current = mediaMap[exercise.id] ?? exercise.videoUrl ?? ''
     const url = window.prompt('Paste YouTube video URL for this exercise (leave empty to remove):', current)
     if (url === null) return

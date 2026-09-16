@@ -367,7 +367,7 @@ export const EXERCISES: Exercise[] = [
     name: 'Weighted Russian Twist',
     target: ['obliques', 'abs'],
     secondary: ['core'],
-    equipment: ['plate', 'dumbbell'],
+    equipment: ['dumbbell', 'kettlebell'],
     difficulty: 'beginner',
     tier: 'B',
     hypertrophyRating: 7,

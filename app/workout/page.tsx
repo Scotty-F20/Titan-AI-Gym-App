@@ -53,11 +53,15 @@ function ExerciseCard({ planned, index }: { planned: GeneratedWorkout['exercises
 
   function saveMedia(url?: string) {
     try {
-      const map = { ...mediaMap }
-      if (url) map[exercise.id] = url
-      else delete map[exercise.id]
-      localStorage.setItem('titan:exerciseMedia', JSON.stringify(map))
-      setMediaMap(map)
+        if (!exercise || !exercise.id) {
+          console.warn('No exercise selected for custom demo')
+          return
+        }
+        const map = { ...mediaMap }
+        if (url) map[exercise.id] = url
+        else delete map[exercise.id]
+        localStorage.setItem('titan:exerciseMedia', JSON.stringify(map))
+        setMediaMap(map)
     } catch (e) {
       // ignore
     }

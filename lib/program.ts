@@ -202,5 +202,6 @@ export const PHASE_LABELS: Record<TrainingPhase, string> = {
   'volume-accumulation':  'Phase 1 – Volume Accumulation',
   'progressive-overload': 'Phase 2 – Progressive Overload',
   'high-stimulus':        'Phase 3 – High Stimulus',
+  'peak-growth':          'Phase 4 – Peak Growth',
   'deload':               'Deload & Assessment',
 }
